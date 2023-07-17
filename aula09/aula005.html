@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(99, 159, 255);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p> 
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        
+        corpo.style.background = 'black'
+        window.document.write('Esta escrito assim: <br>' + p1.innerText)
+        p1.style.color = 'blue' 
+        document.write('<br>' + p1.innerHTML) 
+
+        /*
+    Aqui por Seletor Query
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'red'
+        */
+
+        /*
+        Aqui por marca
+        var d = window.document.getElementsByTagName('p')[0]
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+         /*
+        Aqui por ID
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+         /*
+        Aqui por Nome
+        var d = window.document.getElementsByName('msg')[0]
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+         /*
+        Aqui por Classe
+        var d = window.document.getElementsByClassName('msg')[0]
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+
+    </script>
 </body>
 </html>
