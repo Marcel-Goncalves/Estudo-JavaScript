@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body { background-color: aqua;
+                font-family: Arial, Helvetica, sans-serif ;
+                font-size: 20px;
+        }
+
+        #botao {
+            width: 100px;
+            font-weight: bolder;
+            border-radius: 3px;
+        }
+
+        #res {
+            margin-top: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            background-color: blue;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Nacionalidade</h1>
+    Qual a sua nacionalidade:  <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="conferir()" id="botao">
+    <div id="res">
+    </div>
+
+    <script>
+        function conferir() {
+            var nacionalidade = window.document.querySelector('input#pais')
+            var nacional = nacionalidade.value
+            var brasil = 'brasileiro'
+            
+            if (nacional == brasil) {
+                res.innerHTML = `Vc é ${brasil}, Bem vindo a sua terra natal!!! `
+        }
+           else {
+            res.innerHTML = `Vc é ${nacional}, Bem vindo ao Brasil!!!`
+           }
+        }
+    </script>
+</body>
+
+</html>
